@@ -27,7 +27,7 @@ export default function CountUp({
   separator?: string
   onStart?: () => void
   onEnd?: () => void
-  containerRef?: React.RefObject<HTMLElement>
+  containerRef?: React.RefObject<HTMLElement> | null | undefined
 }) {
   const ref = useRef<HTMLSpanElement>(null)
   const [displayValue, setDisplayValue] = useState<string>('')
